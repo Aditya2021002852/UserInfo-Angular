@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserInfo } from './user-info-form/user-info-form.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'user-info';
+  title = 'User Info';
+  selectedUserInfo: UserInfo | undefined;
+
+
+
+  displayUserInfo(userInfo: UserInfo) {
+    this.selectedUserInfo = userInfo;
+  }
 }
